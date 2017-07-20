@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"> 
+</head>
+
+  <body>
+
+    <div class="container">
+
+      <form class="form-signin" role="form" action="/send.php" enctype="multipart/form-data" method="post">
+
+        <h2 class="form-signin-heading">Send your mail with us</h2>
+
+        <label for="control-label">Your name:</label>
+        <input type="text" name="name" class="form-control" placeholder="Your name" required autofocus>
+
+        <label for="control-label">Email:</label>
+        <input type="email" name="email" class="form-control" placeholder="Email" required autofocus>
+
+        <label for="control-label">Text:</label>
+        <textarea class="form-control" name="text" rows="5"></textarea>
+
+        <label for="control-label">File(s):</label>
+        <input id="input-2" name="files[]" type="file" class="file" multiple>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Send</button>
+
+      </form>
+
+    </div>
+
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
+  <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+  <script>tinymce.init({ selector:'textarea' });</script>  
+  </body>
+</html>
